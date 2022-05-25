@@ -42,6 +42,8 @@ namespace Laboratorium_8_Tasks
             this.txt_Answer = new System.Windows.Forms.TextBox();
             this.btn_StartMany = new System.Windows.Forms.Button();
             this.rtxt_ThreadStreamer = new System.Windows.Forms.RichTextBox();
+            this.prgBr_ThreadProcess = new System.Windows.Forms.ProgressBar();
+            this.lbl_Process = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_From
@@ -80,7 +82,7 @@ namespace Laboratorium_8_Tasks
             // 
             // btn_StartOne
             // 
-            this.btn_StartOne.Location = new System.Drawing.Point(361, 147);
+            this.btn_StartOne.Location = new System.Drawing.Point(361, 200);
             this.btn_StartOne.Name = "btn_StartOne";
             this.btn_StartOne.Size = new System.Drawing.Size(91, 27);
             this.btn_StartOne.TabIndex = 5;
@@ -90,7 +92,7 @@ namespace Laboratorium_8_Tasks
             // 
             // btn_Clear
             // 
-            this.btn_Clear.Location = new System.Drawing.Point(361, 209);
+            this.btn_Clear.Location = new System.Drawing.Point(361, 270);
             this.btn_Clear.Name = "btn_Clear";
             this.btn_Clear.Size = new System.Drawing.Size(188, 27);
             this.btn_Clear.TabIndex = 6;
@@ -118,7 +120,7 @@ namespace Laboratorium_8_Tasks
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 65);
+            this.label4.Location = new System.Drawing.Point(25, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 16);
             this.label4.TabIndex = 10;
@@ -127,7 +129,7 @@ namespace Laboratorium_8_Tasks
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(358, 97);
+            this.label5.Location = new System.Drawing.Point(358, 130);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 16);
             this.label5.TabIndex = 11;
@@ -136,14 +138,14 @@ namespace Laboratorium_8_Tasks
             // txt_Answer
             // 
             this.txt_Answer.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_Answer.Location = new System.Drawing.Point(419, 94);
+            this.txt_Answer.Location = new System.Drawing.Point(419, 127);
             this.txt_Answer.Name = "txt_Answer";
             this.txt_Answer.Size = new System.Drawing.Size(130, 22);
             this.txt_Answer.TabIndex = 12;
             // 
             // btn_StartMany
             // 
-            this.btn_StartMany.Location = new System.Drawing.Point(458, 147);
+            this.btn_StartMany.Location = new System.Drawing.Point(458, 200);
             this.btn_StartMany.Name = "btn_StartMany";
             this.btn_StartMany.Size = new System.Drawing.Size(91, 27);
             this.btn_StartMany.TabIndex = 13;
@@ -153,17 +155,35 @@ namespace Laboratorium_8_Tasks
             // 
             // rtxt_ThreadStreamer
             // 
-            this.rtxt_ThreadStreamer.Location = new System.Drawing.Point(28, 85);
+            this.rtxt_ThreadStreamer.Location = new System.Drawing.Point(28, 97);
             this.rtxt_ThreadStreamer.Name = "rtxt_ThreadStreamer";
             this.rtxt_ThreadStreamer.Size = new System.Drawing.Size(297, 151);
             this.rtxt_ThreadStreamer.TabIndex = 14;
             this.rtxt_ThreadStreamer.Text = "";
             // 
+            // prgBr_ThreadProcess
+            // 
+            this.prgBr_ThreadProcess.Location = new System.Drawing.Point(28, 270);
+            this.prgBr_ThreadProcess.Name = "prgBr_ThreadProcess";
+            this.prgBr_ThreadProcess.Size = new System.Drawing.Size(297, 27);
+            this.prgBr_ThreadProcess.TabIndex = 15;
+            // 
+            // lbl_Process
+            // 
+            this.lbl_Process.AutoSize = true;
+            this.lbl_Process.Location = new System.Drawing.Point(129, 251);
+            this.lbl_Process.Name = "lbl_Process";
+            this.lbl_Process.Size = new System.Drawing.Size(98, 16);
+            this.lbl_Process.TabIndex = 16;
+            this.lbl_Process.Text = "Processing 0%";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 248);
+            this.ClientSize = new System.Drawing.Size(579, 309);
+            this.Controls.Add(this.lbl_Process);
+            this.Controls.Add(this.prgBr_ThreadProcess);
             this.Controls.Add(this.rtxt_ThreadStreamer);
             this.Controls.Add(this.btn_StartMany);
             this.Controls.Add(this.txt_Answer);
@@ -178,6 +198,7 @@ namespace Laboratorium_8_Tasks
             this.Controls.Add(this.txt_NumOfThreads);
             this.Controls.Add(this.txt_From);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -202,6 +223,8 @@ namespace Laboratorium_8_Tasks
         private System.Windows.Forms.TextBox txt_Answer;
         private System.Windows.Forms.Button btn_StartMany;
         private System.Windows.Forms.RichTextBox rtxt_ThreadStreamer;
+        private System.Windows.Forms.ProgressBar prgBr_ThreadProcess;
+        private System.Windows.Forms.Label lbl_Process;
     }
 }
 
